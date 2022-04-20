@@ -127,6 +127,28 @@ body {
   animation: hulkRightArm 6s infinite;
 }
 
+.hulk .right-arm-joint {
+  position: absolute;
+  top: 0px;
+  left: 160px;
+  width: 40px;
+  height: 130px;
+  background: red;
+  border-radius: 20px;
+  transform: rotate(-45deg);
+}
+
+.hulk .left-arm-joint {
+  position: absolute;
+  top: 0px;
+  left: -70px;
+  width: 40px;
+  height: 130px;
+  background: red;
+  border-radius: 20px;
+  transform: rotate(45deg);
+}
+
 .hulk .left-arm {
   position: absolute;
   top: 0px;
