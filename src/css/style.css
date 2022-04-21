@@ -17,8 +17,8 @@ body {
   width: 550px;
   height: 365px;
   margin: 15% auto;
-  -webkit-animation: shake 3s infinite;
-          animation: shake 3s infinite;
+  -webkit-animation: shake 6s infinite;
+          animation: shake 6s infinite;
 }
 
 .circle {
@@ -129,25 +129,75 @@ body {
 
 .hulk .right-arm-joint {
   position: absolute;
-  top: 0px;
+  top: 40px;
   left: 160px;
   width: 40px;
   height: 130px;
-  background: red;
+  background: #b5b500;
   border-radius: 20px;
   transform: rotate(-45deg);
+  transform-origin: top left;
+  animation: rightArmJoint 6s infinite;
+}
+
+.hulk .right-arm-joint::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 133px;
+  left: 15px;
+  width: 12px;
+  height: 8px;
+  border-radius: 50%;
+  background: #949400;
+}
+.hulk .left-arm-joint::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 133px;
+  left: 15px;
+  width: 12px;
+  height: 8px;
+  border-radius: 50%;
+  background: #949400;
 }
 
 .hulk .left-arm-joint {
   position: absolute;
-  top: 0px;
-  left: -70px;
+  top: 30px;
+  left: -5px;
   width: 40px;
   height: 130px;
-  background: red;
-  border-radius: 20px;
+  background: #b5b500;
+  border-radius: 20px; 
   transform: rotate(45deg);
+  transform-origin: top right;
+  animation: leftArmJoint 6s infinite;
 }
+
+.hulk .left-arm-front {
+  position: absolute;
+  top: 30px;
+  left: -110px;
+  width: 40px;
+  height: 130px;
+  background: #b5b500;
+  border-radius: 20px;
+  transform: rotate(90deg);
+}
+
+.hulk .right-arm-front {
+  position: absolute;
+  top: 30px;
+  left: 250px;
+  width: 40px;
+  height: 130px;
+  background: #b5b500;
+  border-radius: 20px;
+  transform: rotate(90deg);
+}
+
 
 .hulk .left-arm {
   position: absolute;
@@ -529,7 +579,78 @@ body {
   border-bottom: 1px solid #ab3300;
 }
 
+@keyframes shake {
+  28%,30%,32%,34%,36%,38%,40%,42% {
+    top: 3px;
+    left: 2px;
+  }
+  29%,31%,33%,35%,37%,39%,41%,43% {
+    top: 0px;
+    left: -2px;
+  }
+  45%{
+    top: 0px;
+    left: 0px;
+  }
+}
 
+@keyframes leftArmJoint {
+  0% {
+
+  }
+
+  5%{
+    transform: rotate(90deg);
+  }
+
+  15% {
+    transform: rotate(160deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+
+  35% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+
+}
+@keyframes rightArmJoint {
+  0% {
+
+  }
+
+  5%{
+    transform: rotate(-90deg);
+  }
+
+  15% {
+    transform: rotate(-160deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+
+  35% {
+    transform: rotate(-45deg);
+  }
+
+  46.9% {
+    transform: rotate(-45deg);
+  }
+
+  47% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(-90deg);  
+  }
+}
 @keyframes circleExpand {
 
     20% {
@@ -552,14 +673,14 @@ body {
   30% {
 
   }
-  46.9% {
+  45.9% {
     transform: translateX(0em);
   }
   47% {
-    transform: translateX(10em);
+    transform: translateX(10em) rotate(45deg);
   }
   100% {
-    transform: translateX(50em);
+    transform: translateX(60em) rotate(90deg);
   }
 }
 @keyframes mouthOpen {
