@@ -117,97 +117,30 @@ body {
 
 
 .hulk .right-arm {
-  position: absolute;
-  top: 0px;
-  left: 160px;
-  width: 40px;
-  height: 200px;
-  background: #b5b500;
-  border-radius: 20px;
-  animation: hulkRightArm 6s infinite;
-}
-
-.hulk .right-arm-joint {
-  position: absolute;
-  top: 40px;
-  left: 160px;
-  width: 40px;
-  height: 130px;
-  background: #b5b500;
-  border-radius: 20px;
-  transform: rotate(-45deg);
-  transform-origin: top left;
-  animation: rightArmJoint 6s infinite;
-}
-
-.hulk .right-arm-joint::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 133px;
-  left: 15px;
-  width: 12px;
-  height: 8px;
+  width: 13.313em;
+  height: 13.75em;
+  margin-top: 1em;
+  margin-left: 2em;
   border-radius: 50%;
-  background: #949400;
-}
-.hulk .left-arm-joint::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 133px;
-  left: 15px;
-  width: 12px;
-  height: 8px;
-  border-radius: 50%;
-  background: #949400;
-}
-
-.hulk .left-arm-joint {
-  position: absolute;
-  top: 30px;
-  left: -5px;
-  width: 40px;
-  height: 130px;
   background: #b5b500;
-  border-radius: 20px; 
-  transform: rotate(45deg);
-  transform-origin: top right;
-  animation: leftArmJoint 6s infinite;
-}
-
-.hulk .left-arm-front {
   position: absolute;
-  top: 30px;
-  left: -110px;
-  width: 40px;
-  height: 130px;
-  background: #b5b500;
-  border-radius: 20px;
-  transform: rotate(90deg);
-}
-
-.hulk .right-arm-front {
-  position: absolute;
-  top: 30px;
-  left: 250px;
-  width: 40px;
-  height: 130px;
-  background: #b5b500;
-  border-radius: 20px;
-  transform: rotate(90deg);
+  clip: rect(-1em, 11.2em, 12.55em, 7.625em);
+  -webkit-animation: hulkRightarm 6s infinite;
+          animation: hulkRightarm 6s infinite;
 }
 
 
 .hulk .left-arm {
+  width: 13.313em;
+  height: 13.75em;
+  margin-top: 1em;
+  margin-left: -4.3em;
+  border-radius: 50%;
+  background: #949400;
   position: absolute;
-  top: 0px;
-  left: -5px;
-  width: 40px;
-  height: 200px;
-  background: #b5b500;
-  border-radius: 20px;
-  animation: hulkLeftArm 6s infinite;
+  clip: rect(-0.188em, 6.1em, 13.875em, 2.3em);
+  -webkit-animation: hulkLeftarm 6s infinite;
+          animation: hulkLeftarm 6s infinite;
 }
 
 .hulk .fist {
@@ -594,63 +527,7 @@ body {
   }
 }
 
-@keyframes leftArmJoint {
-  0% {
 
-  }
-
-  5%{
-    transform: rotate(90deg);
-  }
-
-  15% {
-    transform: rotate(160deg);
-  }
-  25% {
-    transform: rotate(90deg);
-  }
-
-  35% {
-    transform: rotate(45deg);
-  }
-
-  100% {
-    transform: rotate(45deg);
-  }
-
-}
-@keyframes rightArmJoint {
-  0% {
-
-  }
-
-  5%{
-    transform: rotate(-90deg);
-  }
-
-  15% {
-    transform: rotate(-160deg);
-  }
-  25% {
-    transform: rotate(-90deg);
-  }
-
-  35% {
-    transform: rotate(-45deg);
-  }
-
-  46.9% {
-    transform: rotate(-45deg);
-  }
-
-  47% {
-    transform: rotate(-90deg);
-  }
-
-  100% {
-    transform: rotate(-90deg);  
-  }
-}
 @keyframes circleExpand {
 
     20% {
@@ -673,10 +550,10 @@ body {
   30% {
 
   }
-  45.9% {
+  65.9% {
     transform: translateX(0em);
   }
-  47% {
+  67% {
     transform: translateX(10em) rotate(45deg);
   }
   100% {
@@ -723,53 +600,90 @@ body {
     margin-left: -2.1em;
     transform: translate(0em, 0em);
   }
-}
 
-@keyframes hulkRightArm {
-  27% {
+  66.9% {
+    box-shadow: 11.1em 0 0 #b5b500;
+    margin-left: -2.1em;
     transform: translate(0em, 0em);
   }
-  30% {
-    transform: translate(-1em, -100%);
+  67% {
+    box-shadow: 19.5em -10.5em 0 #b5b500;
   }
-  43% {
-    transform: translate(-1em, -100%);
-  }
-  45% {
-    transform: translate(0em, 0em);
-  }
-
-  47% {
-    transform: rotate(-90deg);
-  }
-
   100% {
-    transform: rotate(-90deg);
+    box-shadow: 19.5em -10.5em 0 #b5b500;
   }
 }
 
-@keyframes hulkLeftArm {
+@keyframes hulkRightarm {
   27% {
-    transform: translate(0em, 0em);
+    margin-top: 1em;
+    margin-left: 2em;
+    clip: rect(-1em, 11.2em, 12.55em, 7.625em);
   }
   30% {
-    transform: translate(-1em, -100%);
+    margin-top: -8.125em;
+    margin-left: 2.5em;
+    clip: rect(0.563em, 13.363em, 13.75em, 6.625em);
   }
   43% {
-    transform: translate(-1em, -100%);
+    margin-top: -8.125em;
+    margin-left: 2.5em;
+    clip: rect(0.563em, 13.363em, 13.75em, 6.625em);
   }
   45% {
-    transform: translate(0em, 0em);
+    margin-top: 1em;
+    margin-left: 2em;
+    clip: rect(-1em, 11.2em, 12.55em, 7.625em);
   }
 
+  66.9% {
+    width: 13.313em;
+    height: 13.75em;
+    margin-top: 1em;
+    margin-left: 2em;
+    border-radius: 50%;
+    clip: rect(-1em, 11.2em, 12.55em, 7.625em);
+  }
+  67% {
+    width: 18em;
+    height: 5em;
+    margin-top: 1em;
+    margin-left: 2em;
+    border-radius: 30%;
+    clip: auto;
+  }
+  100%{
+    width: 18em;
+    height: 5em;
+    margin-top: 1em;
+    margin-left: 2em;
+    border-radius: 30%;
+    clip: auto;
+  } 
+}
+
+@keyframes hulkLeftarm {
+  27% {
+    margin-top: 1em;
+    margin-left: -4.3em;
+    clip: rect(-0.188em, 6.1em, 13.875em, 2.3em);
+  }
+  30% {
+    margin-top: -8.125em;
+    margin-left: -4.375em;
+    clip: rect(-0.188em, 6.563em, 13.875em, 0em);
+  }
+  43% {
+    margin-top: -8.125em;
+    margin-left: -4.375em;
+    clip: rect(-0.188em, 6.563em, 13.875em, 0em);
+  }
   45% {
-    
+    margin-top: 1em;
+    margin-left: -4.3em;
+    clip: rect(-0.188em, 6.1em, 13.875em, 2.3em);
   }
-
-  100% {
-    
-  }
-} 
+}
 .footer--love {
   position: absolute;
   right: 1.5rem;
