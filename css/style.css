@@ -541,15 +541,6 @@ body {
     }
 }
 @keyframes thorDisappear {
-  0% {
-
-  }
-  20% {
-    
-  }
-  30% {
-
-  }
   65.9% {
     transform: translateX(0em);
   }
